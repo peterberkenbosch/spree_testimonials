@@ -11,9 +11,12 @@
 
 <h1><%= t("testimonials") %></h1>
 
+<%= will_paginate(@testimonials) %>
+
 <table class="index">
 	<tr>
 		<th><%= t("testimonial_name") %></th>
+		<th><%= t("email") %></th>
 		<th><%= t("testimonial_body") %></th>
 		<th><%= t("action") %></th>
   </tr>
@@ -22,6 +25,9 @@
 		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id(testimonial) %>">
 			<td>
 				<%= testimonial.name %>
+			</td>
+			<td>
+				<%= testimonial.email %>
 			</td>
 			<td>
 				<%= testimonial.body %>
@@ -34,3 +40,5 @@
 		<% end %>
 	</tbody>
 </table>
+
+<%= will_paginate(@testimonials) %>
