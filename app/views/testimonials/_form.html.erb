@@ -1,4 +1,10 @@
+<%= render 'shared/error_messages', :target => @testimonial %>
+
 <table class="admin-report" width="545">
+	<tr>
+    <td valign="top"><%= t("email") %>:</td>
+    <td><%= f.text_field :email, {"style" => "width:395px"} %></td>
+  </tr>
 	<tr>
     <td valign="top"><%= t("testimonial_name") %>:</td>
     <td><%= f.text_field :name, {"style" => "width:395px"} %></td>
